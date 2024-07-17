@@ -12,8 +12,11 @@ export class SidebarComponent {
 
   }
 
-  get tags(){
+  get tags(): string[]{
     return this.gistService.tagsHistory;
   }
 
+  searchTag( tag: string ){
+    this.gistService.searchTag(tag);
+  }
 }
